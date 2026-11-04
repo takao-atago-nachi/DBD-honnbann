@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DBD Style Mini Game</title>
+  <style>
+    body { margin: 0; overflow: hidden; background-color: #000; font-family: sans-serif; }
+    #ui { position: absolute; top: 15px; left: 15px; color: #fff; text-shadow: 2px 2px 4px #000; pointer-events: none; }
+    .killer-text { color: #ff4444; font-weight: bold; }
+    .survivor-text { color: #44ff44; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <div id="ui">
+    <h2>DBD Style Tag Game</h2>
+    <p>あなたの役割: <span id="role">接続中...</span></p>
+    <p>操作方法: [W][A][S][D] で移動</p>
+    <p id="attack-hint" style="display:none; color:#ff8888;">[スペースキー] で攻撃！</p>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
